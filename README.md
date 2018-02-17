@@ -22,13 +22,14 @@ The goal of this project was to create a basic neural network that can can diffe
 
 ## The idea behind the project
 There are several visual differences between a normal brain and a brain affected with Alzheimer's. The aim was to build a neural network that could identify these differences.
-![Shrivelling of Cerebral Cortex](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Shrivel.png) 
-![Shrinkage of Hippocampus](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Shrinkage.png)
-![Enlargement of the Ventricles](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Enlargement.png)
+![Shrivelling of Cerebral Cortex](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Shrivel.png=250x250) 
+![Shrinkage of Hippocampus](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Shrinkage.png=250x250)
+![Enlargement of the Ventricles](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Enlargement.png=250x250)
 
 ## Data
-The data was procured from <oasis-brains.org> and consisted of the 3D MRI scans of 416 patients out of which 100 patients were diagnosed with Alzheimer.
-![Oasis Data](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Cross-Sections.png)
+The data was procured from oasis-brains.org and consisted of the 3D MRI scans of 416 patients out of which 100 patients were diagnosed with Alzheimer.
+
+![Oasis Data](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Cross-Sections.png=250x250)
 
 ## Preprocessing
 As the number of slices in each 3D image is very high, in order to shrink the number of slices down to a number that can be dealt with, we averaged the pixel intensity over 10 slices, to create 16 chunks.
@@ -49,7 +50,7 @@ The model acheived an accuracy of 79.7% on the test data after training on the 1
 The training set consisted of 84 patients out of which 61 were not diseased, thus 72.6% (61/84) was the score to beat.
 The results show that the model is still confused with classifying the patients that are suffering from Alzheimer.
 However, it has started to learn some of the features for doing so and with more data may yield better results.
-![Confusion Matrix](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Confusion_matrix.png)
+![Confusion Matrix](https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Confusion_matrix.png=250x250)
 
 ## Proceeding from here
 
