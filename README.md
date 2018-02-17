@@ -22,6 +22,8 @@ The goal of this project was to create a basic neural network that can can diffe
 
 ## The idea behind the project
 There are several visual differences between a normal brain and a brain affected with Alzheimer's. The aim was to build a neural network that could identify these differences.
+
+
 <img src="https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Shrivel.png" height="250" width="250"> 
 <img src="https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Shrinkage.png" height="250" width="250"> 
 <img src="https://github.com/Dyex719/Alz-Net/blob/master/Pictures/Enlargement.png" height="250" width="250"> 
