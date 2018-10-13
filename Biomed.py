@@ -25,9 +25,10 @@ def id_list(source):
                 matches.append(dirname)
     return matches
 
-patients = fileList('C:\\Users\\aditya.i.addepalli\\Downloads\\OASIS\\')
+#As a best practice, data should be stored in data folder
+patients = fileList(os.getcwd() + '/data/OASIS/')
 # pprint.pprint(patients)
-ids = id_list('C:/Users/aditya.i.addepalli/Downloads/OASIS/')
+ids = id_list(os.getcwd() + '/data/OASIS/')
 #pprint.pprint(ids)
 
 
@@ -38,7 +39,7 @@ import numpy as np
 import pandas as pd
 import math
 
-example_file = 'C:\\Users\\aditya.i.addepalli\\Downloads\\OASIS\\OAS1_0351_MR1\\PROCESSED\\MPRAGE\\SUBJ_111\\OAS1_0351_MR1_mpr_n4_anon_sbj_111.img'
+example_file = os.getcwd() + '/data/OASIS/OAS1_0351_MR1/PROCESSED/MPRAGE/SUBJ_111/OAS1_0351_MR1_mpr_n4_anon_sbj_111.img'
 
 # Still have to add for all the files in matches
 # This gives me 20+ slices
@@ -54,7 +55,7 @@ def one_slice(example_file,slice_num):
 # a = one_slice(example_file) # this works
 # print(a[128])
 
-labels_file = 'C:/Users/aditya.i.addepalli/Downloads/OASIS/oasis_cross-sectional.csv'
+labels_file = os.getcwd() + '/data/oasis_cross-sectional.csv'
 read_labels_df = pd.read_csv(labels_file, index_col=0)
 cdr_df = read_labels_df['CDR'].fillna(0)
 #cdr_df = read_labels_df['CDR'].fillna('')
