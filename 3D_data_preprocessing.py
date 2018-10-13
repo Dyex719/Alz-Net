@@ -26,9 +26,9 @@ def id_list(source):
     return matches
 
 #As a best practice, data should be stored in data folder
-patients = fileList(os.getcwd() + '\\data\\')
+patients = fileList(os.getcwd() + '\\Data\\')
 # pprint.pprint(patients)
-ids = id_list(os.getcwd() + '/data/')
+ids = id_list(os.getcwd() + '/Data/')
 #pprint.pprint(ids)
 
 
@@ -39,7 +39,7 @@ import numpy as np
 import pandas as pd
 import math
 
-example_file = os.getcwd() + '\\data\\OAS1_0351_MR1\\PROCESSED\\MPRAGE\\SUBJ_111\\OAS1_0351_MR1_mpr_n4_anon_sbj_111.img'
+example_file = os.getcwd() + '\\Data\\OAS1_0351_MR1\\PROCESSED\\MPRAGE\\SUBJ_111\\OAS1_0351_MR1_mpr_n4_anon_sbj_111.img'
 
 # Still have to add for all the files in matches
 # This gives me 20+ slices
@@ -59,7 +59,7 @@ def all_slice(example_file):
 # a = all_slice(example_file) # this works
 # print(a[128])
 
-labels_file = os.getcwd() + '/data/OASIS/oasis_cross-sectional.csv'
+labels_file = os.getcwd() + '/Data/OASIS/oasis_cross-sectional.csv'
 read_labels_df = pd.read_csv(labels_file, index_col=0)
 cdr_df = read_labels_df['CDR'].fillna(0)
 #cdr_df = read_labels_df['CDR'].fillna('')
