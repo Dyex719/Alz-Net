@@ -15,8 +15,8 @@ drop_prob_1 = 0.25 # dropout after pooling with probability 0.25
 drop_prob_2 = 0.5 # dropout in the FC layer with probability 0.5
 hidden_size = 512 # the FC layer will have 512 neurons
 
-loaded_images = np.load('/home/addepalli/Data/slice80.npy')
-loaded_labels = np.load('/home/addepalli/Data/newlabels.npy')
+loaded_images = np.load(os.getcwd() + '/Data/slice80.npy')
+loaded_labels = np.load(os.getcwd() + '/Data/newlabels.npy')
 
 # split
 X_train = loaded_images[:332]
@@ -25,7 +25,7 @@ X_test = loaded_images[332:]
 Y_test = loaded_labels[332:]
 
 # print(X_train.shape)
-X_train = np.reshape(X_train,(-1,256,256,1))
+X_train = np.reshape(X_train,(-1,256,256,1))os.getcwd() + '/Data/
 # print(X_train.shape)
 X_test = np.reshape(X_test,(-1,256,256,1))
 
