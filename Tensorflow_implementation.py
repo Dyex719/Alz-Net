@@ -18,14 +18,14 @@ def variable_summaries(var):
     tf.summary.scalar('min', tf.reduce_min(var))
     tf.summary.histogram('histogram', var)
 
-loaded_images = np.load('/home/addepalli/Data/slice80_norm.npy')
-loaded_labels = np.load('/home/addepalli/Data/newlabels.npy')
+loaded_images = np.load(os.getcwd() + '/Data/slice80_norm.npy')
+loaded_labels = np.load(os.getcwd() + '/Data/newlabels.npy')
 
 train_images_norm = loaded_images[:-100]
 train_labels = loaded_labels[:-100]
 test_images_norm = loaded_images[-100:]
 test_labels = loaded_labels[-100:]
-
+os.getcwd() + '/Data/
 def next_batch(num, data, labels):
     '''
     Return a total of `num` random samples and labels.
