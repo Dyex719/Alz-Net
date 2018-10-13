@@ -26,9 +26,9 @@ def id_list(source):
     return matches
 
 #As a best practice, data should be stored in data folder
-patients = fileList(os.getcwd() + '/data/OASIS/')
+patients = fileList(os.getcwd() + '\\data\\')
 # pprint.pprint(patients)
-ids = id_list(os.getcwd() + '/data/OASIS/')
+ids = id_list(os.getcwd() + '/data/')
 #pprint.pprint(ids)
 
 
@@ -39,7 +39,7 @@ import numpy as np
 import pandas as pd
 import math
 
-example_file = os.getcwd() + '/data/OASIS/OAS1_0351_MR1/PROCESSED/MPRAGE/SUBJ_111/OAS1_0351_MR1_mpr_n4_anon_sbj_111.img'
+example_file = os.getcwd() + '\\data\\OAS1_0351_MR1\\PROCESSED\\MPRAGE\\SUBJ_111\\OAS1_0351_MR1_mpr_n4_anon_sbj_111.img'
 
 # Still have to add for all the files in matches
 # This gives me 20+ slices
@@ -62,7 +62,7 @@ cdr_df = read_labels_df['CDR'].fillna(0)
 
 
 def process_data(labels_df,patient,count):
-    label = labels_df.get_value(patient.split('\\')[5], 'CDR')
+    label = labels_df.get_value(patient.split('\\')[2], 'CDR')
     try:
         if label > 0: label=np.array([0.0,1.0])
         elif label == 0: label=np.array([1.0,0.0])
