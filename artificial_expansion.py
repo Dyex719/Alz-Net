@@ -3,7 +3,7 @@ import numpy as np
 import nibabel as nib
 import matplotlib.pyplot as plt
 
-example_file = "/home/addepalli/Data/disc1/OAS1_0027_MR1/PROCESSED/MPRAGE/SUBJ_111/OAS1_0027_MR1_mpr_n4_anon_sbj_111.img"
+example_file = os.getcwd() + '/Data/disc1/OAS1_0027_MR1/PROCESSED/MPRAGE/SUBJ_111/OAS1_0027_MR1_mpr_n4_anon_sbj_111.img"
 
 def save_to_jpeg(example_file):
     '''To save the image as a JPEG that can be viewed later'''
