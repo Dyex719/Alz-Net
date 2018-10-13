@@ -14,8 +14,8 @@ num_iterations = 20
 logPath = "./tb_logs_{}/".format(num_iterations)
 
 # load
-loaded_images = np.load('/home/addepalli/Data/balanced_fn/balanced_fn_80.npy')
-loaded_labels = np.load('/home/addepalli/Data/balanced_fn/balanced_fn_labels.npy')
+loaded_images = np.load(os.getcwd() + '/Data/balanced_fn/balanced_fn_80.npy')
+loaded_labels = np.load(os.getcwd() + '/Data/balanced_fn/balanced_fn_labels.npy')
 
 # split
 train_images = loaded_images[:-100]
