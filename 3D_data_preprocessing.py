@@ -25,6 +25,7 @@ def id_list(source):
                 matches.append(dirname)
     return matches
 
+#As a best practice, data should be stored in data folder
 patients = fileList(os.getcwd() + '\\data\\')
 # pprint.pprint(patients)
 ids = id_list(os.getcwd() + '/data/')
